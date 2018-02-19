@@ -25,6 +25,25 @@ class WelcomeForm extends Component {
     ReactDOM.render(<SignInForm />, welcomeContainer)
   }
 
+  registerUser = (event) => {
+    event.preventDefault()
+    const firstName = this.state.firstName
+    const lastName  = this.state.lastName
+    const email     = this.state.email
+    const password  = this.state.password
+
+    addUser(firstName, lastName, email, password)
+      .then((user) => {
+        if(!user) {
+          alert("Input invalid.")
+        } else {
+          console.log('this is a unique user')
+          this.renderSignInForm()
+        }
+      })
+      .catch((error) => console.error({ error }))
+  }
+
   render() {
     return (
       <div className='container'>
