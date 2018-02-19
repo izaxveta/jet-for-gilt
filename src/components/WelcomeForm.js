@@ -1,3 +1,20 @@
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
+import SignInForm from './SignInForm'
+import { addUser } from '../utils/requests'
+import '../styles/welcome-form.scss'
+
+class WelcomeForm extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      firstName: '',
+      lastName:  '',
+      email:     '',
+      password:  ''
+    }
+  }
+
   render() {
     return (
       <div className='container'>
@@ -22,3 +39,4 @@
   }
 }
 
+export default WelcomeForm
