@@ -19,6 +19,12 @@ class WelcomeForm extends Component {
     this.setState({ [key]: event.target.value })
   }
 
+  renderSignInForm = (event) => {
+    let welcomeContainer = document.getElementsByClassName('form-container welcome-container')[0]
+    welcomeContainer.innerHTML = ''
+    ReactDOM.render(<SignInForm />, welcomeContainer)
+  }
+
   render() {
     return (
       <div className='container'>
