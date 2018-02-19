@@ -15,6 +15,10 @@ class WelcomeForm extends Component {
     }
   }
 
+  updateUser = (key, event) => {
+    this.setState({ [key]: event.target.value })
+  }
+
   render() {
     return (
       <div className='container'>
