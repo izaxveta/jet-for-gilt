@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import SignInForm from './SignInForm'
 import { addUser } from '../utils/requests'
-import '../styles/welcome-form.scss'
+import '../styles/welcome-form.css'
 
 class WelcomeForm extends Component {
   constructor(props) {
