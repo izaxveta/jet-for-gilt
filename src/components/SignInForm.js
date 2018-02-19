@@ -10,6 +10,14 @@ class SignInForm extends Component {
     }
   }
 
+  updateUser = (key, event) => {
+    this.setState({ [key]: event.target.value })
+  }
+
+  signInUser = () => {
+    const email = this.state.email
+    const password = this.state.password
+  }
 
   render() {
     return (
