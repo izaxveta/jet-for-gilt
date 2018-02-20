@@ -1,0 +1,112 @@
+swagger: "2.0"
+info:
+  description: "This is a platform for users to find outfits and fashion pieces for their next trip based on where they plan to visit."
+  version: "1.0.0"
+  title: "Jet API"
+  termsOfService: "http://jet-for-gilt-api.heroku.com/terms/"
+  contact:
+    email: "izaxveta@gmail.com"
+host: "jet-for-gilt-api.heroku.com"
+basePath: "/api/v1/"
+tags:
+- name: "fashion"
+  description: "Stay up to date in fashion trends from top brands with GILT."
+- name: "hospitality"
+  description: "Find premier hospitality venues for your next trip."
+schemes:
+- "http"
+paths:
+  /users:
+    post:
+      tags:
+      - "user"
+      summary: "Add a new user to the database"
+      description: ""
+      operationId: "addUser"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "user"
+        description: "New user registered to "
+        required: true
+        schema:
+          $ref: "#/definitions/User"
+      responses:
+        405:
+          description: "Invalid input"
+      security:
+      - petstore_auth:
+        - "write:pets"
+        - "read:pets"
+  /users/{id}:
+    get:
+      tags:
+      - "user"
+      summary: "Get all information on user"
+      description: ""
+      operationId: "getUser"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "path"
+        name: "id"
+        description: "Id of user to search by "
+        required: true
+        schema:
+          $ref: "#/definitions/User"
+      responses:
+        405:
+          description: "Invalid input"
+      security:
+      - petstore_auth:
+        - "write:pets"
+        - "read:pets"
+securityDefinitions:
+  petstore_auth:
+    type: "oauth2"
+    authorizationUrl: "http://petstore.swagger.io/oauth/dialog"
+    flow: "implicit"
+    scopes:
+      write:pets: "modify pets in your account"
+      read:pets: "read your pets"
+  api_key:
+    type: "apiKey"
+    name: "api_key"
+    in: "header"
+definitions:
+  User:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      first_name:
+        type: "string"
+      last_name:
+        type: "string"
+      email:
+        type: "string"
+      password:
+        type: "string"
+      phone:
+        type: "string"
+    xml:
+      name: "User"
+  ApiResponse:
+    type: "object"
+    properties:
+      code:
+        type: "integer"
+        format: "int32"
+      type:
+        type: "string"
+      message:
+        type: "string"
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"
