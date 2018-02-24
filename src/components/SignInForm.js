@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-// import ReactDOM from 'react-dom';
-import { authenticateUser } from  '../utils/requests'
-// import App from './App'
+// import { authenticateUser } from  '../utils/requests'
 
 class SignInForm extends Component {
   constructor(props) {
@@ -20,8 +18,8 @@ class SignInForm extends Component {
     event.preventDefault()
     const email = this.state.email
     const password = this.state.password
-    const token = authenticateUser(email, password)
-    console.log(token)
+    // const token = authenticateUser(email, password)
+    // console.log(token)
     // window.location.assign('/dashboard')
   }
 
