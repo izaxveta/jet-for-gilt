@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import WelcomeForm from './WelcomeForm'
+// import ReactDOM from 'react-dom';
+import { authenticateUser } from  '../utils/requests'
+// import App from './App'
 
 class SignInForm extends Component {
   constructor(props) {
@@ -15,15 +16,19 @@ class SignInForm extends Component {
     this.setState({ [key]: event.target.value })
   }
 
-  signInUser = () => {
+  signInUser = (event) => {
+    event.preventDefault()
     const email = this.state.email
     const password = this.state.password
+    const token = authenticateUser(email, password)
+    console.log(token)
+    // window.location.assign('/dashboard')
   }
 
   renderRegisterForm = (event) => {
     let welcomeContainer = document.getElementById('landing-container')
-    welcomeContainer.innerHTML = ''
-    // ReactDOM.render(<WelcomeForm />, welcomeContainer)
+    // welcomeContainer.innerHTML = ''
+    // ReactDOM.render(<App />, welcomeContainer)
     window.location.reload()
   }
 
