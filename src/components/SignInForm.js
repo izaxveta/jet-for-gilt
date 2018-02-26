@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import getUser from '../utils/requests'
+// , query: { {user: getUser(this.state.email) }}
+import { Link } from 'react-router-dom'
+
 // import { authenticateUser } from  '../utils/requests'
 
 class SignInForm extends Component {
@@ -17,7 +21,10 @@ class SignInForm extends Component {
   signInUser = (event) => {
     event.preventDefault()
     const email = this.state.email
-    const password = this.state.password
+    // const password = this.state.password
+
+    let user = getUser(email)
+
     // const token = authenticateUser(email, password)
     // console.log(token)
     // window.location.assign('/dashboard')
@@ -40,6 +47,7 @@ class SignInForm extends Component {
               <input required className='data-field' id='signin-email'    type='email'    placeholder='EMAIL'    onChange={ this.updateUser.bind(this, 'email') } />
               <input required className='data-field' id='signin-password' type='password' placeholder='PASSWORD' onChange={ this.updateUser.bind(this, 'password') } />
               <button type='submit' className='signin-button' onClick={ this.signInUser }>SIGN IN</button>
+              <Link to={{ pathname: '/dashboard' }}>SIGN IN</Link>
             </form>
           </div>
         </div>
