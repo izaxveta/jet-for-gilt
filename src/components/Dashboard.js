@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import UserNav from './UserNav'
-import getUser from './utils/requests'
+import getUser from '../utils/requests'
 import '../styles/Dashboard.css'
 
 class Dashboard extends Component {
