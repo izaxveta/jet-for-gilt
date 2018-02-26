@@ -36,20 +36,22 @@ nav {
 // //   padding-top: 10px;
 // // }
 
-// .navigation-buttons a {
-//   font-family: $josefin-sans;
-//   font-style: normal;
-//   text-decoration: none;
-//   color: goldenrod;
-// }
+.navigation-buttons a {
+  font-family: $josefin-sans;
+  font-style: normal;
+  text-decoration: none;
+  color: goldenrod;
+}
 
-// .navigation-buttons {
-//   display: flex;
-//   width: 90%;
-//   justify-content: space-around;
-//   align-items: center;
-//   padding-bottom: 5px;
-// }
+.navigation-buttons {
+  position: fixed;
+  top: 15%;
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 5px;
+}
 
 #landing-container {
   width : 100%;
