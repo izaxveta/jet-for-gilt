@@ -18,10 +18,16 @@ class Landing extends Component {
     this.setState({ mode: 'sign-in' })
   }
 
+  onClickRegister = (event) => {
+    event.preventDefault()
+    this.setState({ mode: 'register' })
+  }
+
   componentDidMount() {
     let videoContainer = document.getElementById('video')
     ReactDOM.render(<Video />, videoContainer)
   }
+
   renderWelcomeContainer = () => {
     if (this.state.mode === 'register') {
       return (
@@ -38,6 +44,10 @@ class Landing extends Component {
       return (
         <React.Fragment>
           <SignInForm />
+          <div className='line-divider'></div>
+          <p>New user? Click the button below to register.</p>
+          <button type='submit' className='register-button' onClick={ this.onClickRegister }>REGISTER</button>
+          <p></p>
         </React.Fragment>
       )
     }
