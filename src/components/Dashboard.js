@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
-import { getUser } from '../utils/requests'
 import '../styles/Dashboard.css'
 
 import NavBar from './NavBar'
