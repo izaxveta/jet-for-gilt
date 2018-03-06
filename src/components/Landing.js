@@ -18,6 +18,11 @@ class Landing extends Component {
     this.setState({ mode: 'sign-in' })
   }
 
+  onClickRegister = (event) => {
+    event.preventDefault()
+    this.setState({ mode: 'register' })
+  }
+
   componentDidMount() {
     let videoContainer = document.getElementById('video')
     ReactDOM.render(<Video />, videoContainer)
