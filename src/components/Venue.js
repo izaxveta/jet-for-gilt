@@ -8,7 +8,7 @@ const Venue = (props) => {
     <div className='venue-container'>
       <Link to={{ pathname:'/venue', state: venue }}>
       <div className='venue-listing'>
-      <div className='listing-venue-image'><img src="venue.image_url" alt="venue image"/></div>
+      <div className='listing-venue-image'><img src="venue.image_url" alt=''/></div>
         <div className='venue-listing-info'>
           <div className='grouped-info-a'>
             <div className='venue-name-category'>
