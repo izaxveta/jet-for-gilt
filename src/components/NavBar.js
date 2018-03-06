@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import Video from './Video'
 import SearchBar from './SearchBar'
 
 
