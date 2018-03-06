@@ -44,6 +44,10 @@ class Landing extends Component {
       return (
         <React.Fragment>
           <SignInForm />
+          <div className='line-divider'></div>
+          <p>New user? Click the button below to register.</p>
+          <button type='submit' className='register-button' onClick={ this.onClickRegister }>REGISTER</button>
+          <p></p>
         </React.Fragment>
       )
     }
