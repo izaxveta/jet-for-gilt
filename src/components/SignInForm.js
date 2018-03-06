@@ -27,11 +27,6 @@ class SignInForm extends Component {
     // window.location.assign('/dashboard')
   }
 
-  renderRegisterForm = (event) => {
-    let welcomeContainer = document.getElementById('landing-container')
-    window.location.reload()
-  }
-
   render() {
     return (
       <React.Fragment>
