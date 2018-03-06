@@ -27,6 +27,7 @@ class Landing extends Component {
     let videoContainer = document.getElementById('video')
     ReactDOM.render(<Video />, videoContainer)
   }
+
   renderWelcomeContainer = () => {
     if (this.state.mode === 'register') {
       return (
