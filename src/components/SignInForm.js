@@ -46,10 +46,6 @@ class SignInForm extends Component {
             </form>
           </div>
         </div>
-        <div className='line-divider'></div>
-        <p>New user? Click the button below to register.</p>
-        <button type='submit' className='register-button' onClick={ this.renderRegisterForm }>REGISTER</button>
-        <p></p>
       </React.Fragment>
     )
   }
