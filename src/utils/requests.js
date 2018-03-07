@@ -8,7 +8,12 @@ const setCurrentUser = (moniker, password) => {
 const authenticateUser = (moniker, password) => {
   return fetch('https://jet-for-gilt.herokuapp.com/api/v1/authenticate', authenticateHeaders(moniker, password))
     .then((response) => handleResponse(response))
+    .then((token) => setToken(token))
     .catch((error) => console.error({ error }))
+}
+
+const setToken = (token) => {
+  localStorage.setItem('auth_token', token.auth_token)
 }
 
 const authenticateHeaders = (moniker, password) => {
