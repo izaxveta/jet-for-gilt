@@ -21,7 +21,7 @@ class Dashboard extends Component {
     return (
       <React.Fragment>
         <NavBar />
-
+        <UserDashboard />
       </React.Fragment>
     )
   }
