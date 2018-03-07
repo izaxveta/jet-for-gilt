@@ -6,7 +6,7 @@ class SignInForm extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      email: '',
+      moniker: '',
       password: ''
     }
   }
