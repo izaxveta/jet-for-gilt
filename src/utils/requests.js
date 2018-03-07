@@ -57,5 +57,5 @@ const handleResponse = (response) => {
 module.exports = {
   setCurrentUser,
   addUser,
-  // authenticateUser
+  handleAuthentication
 }
