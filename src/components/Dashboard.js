@@ -15,7 +15,9 @@ class Dashboard extends Component {
 
   componentWillMount() {
     document.getElementById('video-background').innerHTML = ''
-    setCurrentUser(this.state.moniker, this.props.location.state.password)
+    if (!this.state.currentUser) {
+      setCurrentUser(this.state.moniker, this.props.location.state.password)
+    }
   }
 
   render() {
