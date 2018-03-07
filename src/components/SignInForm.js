@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import getUser from '../utils/requests'
 // , query: { {user: getUser(this.state.email) }}
 import { Link } from 'react-router-dom'
 // import { authenticateUser } from  '../utils/requests'
