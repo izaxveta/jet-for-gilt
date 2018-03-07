@@ -4,6 +4,19 @@ const setCurrentUser = (moniker, password) => {
     .catch((error) => console.error({ error }))
 }
 
+const setUser = (moniker) => {
+  return fetch(`https://jet-for-gilt.herokuapp.com/api/v1/users/${moniker}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': localStorage.getItem('auth_token')
+    }
+  })
+    .then((response) => handleResponse(response))
+    .then((user) => localStorage.setItem('user', JSON.stringify(user)))
+    .catch((error) => console.error({ error }))
+}
+
 const requestHeaders = () => {
   return {
     method: 'GET',
