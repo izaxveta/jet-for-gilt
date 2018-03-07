@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import Video from './Video'
 import SearchBar from './SearchBar'
 
 
@@ -8,9 +7,15 @@ class NavBar extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      user: props.user
+      user: localStorage.getItem('user')
     }
   }
+
+componentWillMount() {
+  if (!this.state.user) {
+    // window.location.assign('/')
+  }
+}
 
   renderNavLinks = () => {
     if (this.state.user) {

@@ -1,21 +1,53 @@
-// const authenticateUser = (email, password) => {
-//   return fetch('http://jet-for-gilt.herokuapp.com/api/v1/authenticate', authenticateHeaders(email, password))
-//     .then((response) => handleResponse(response))
-//     .catch((error) => console.error({ error }))
-// }
-
-// const authenticateHeaders = (email, password) => {
-//   return {
-//     method: 'POST',
-//     headers: {'Content-Type': 'application/json'},
-//     body: { 'email': email, 'password': password }
-//   }
-// }
-
-const getUser = (email) => {
-  return fetch(`http://jet-for-gilt.herokuapp.com/api/v1/users/${email}`)
-    .then((response) => handleResponse(response))
+const setCurrentUser = (moniker, password) => {
+  return authenticateUser(moniker, password)
+    .then(() => setUser(moniker))
     .catch((error) => console.error({ error }))
+}
+
+const setUser = (moniker) => {
+  return fetch(`https://jet-for-gilt.herokuapp.com/api/v1/users/${moniker}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': localStorage.getItem('auth_token')
+    }
+  })
+    .then((response) => handleResponse(response))
+    .then((user) => localStorage.setItem('user', JSON.stringify(user)))
+    .catch((error) => console.error({ error }))
+}
+
+const requestHeaders = () => {
+  return {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': localStorage.getItem('auth_token')
+    }
+  }
+}
+
+const handleAuthentication = (moniker, password) => {
+  authenticateUser(moniker,password)
+}
+
+const authenticateUser = (moniker, password) => {
+  return fetch('https://jet-for-gilt.herokuapp.com/api/v1/authenticate', authenticateHeaders(moniker, password))
+    .then((response) => handleResponse(response))
+    .then((token) => setToken(token))
+    .catch((error) => console.error({ error }))
+}
+
+const setToken = (token) => {
+  localStorage.setItem('auth_token', token.auth_token)
+}
+
+const authenticateHeaders = (moniker, password) => {
+  return {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({ 'moniker': moniker, 'password': password })
+  }
 }
 
 const addUser = (firstName, lastName, email, password) => {
@@ -55,7 +87,7 @@ const handleResponse = (response) => {
 }
 
 module.exports = {
-  getUser,
+  setCurrentUser,
   addUser,
-  // authenticateUser
+  handleAuthentication
 }
