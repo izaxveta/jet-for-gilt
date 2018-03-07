@@ -7,4 +7,13 @@ class UserDashboard extends Component {
     }
   }
 
+  render() {
+    return (
+      <React.Fragment>
+       <p>hi</p>
+      </React.Fragment>
+    )
+  }
+}
+
 export default UserDashboard
