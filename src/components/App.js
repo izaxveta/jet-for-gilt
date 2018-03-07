@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 
 import  Landing  from './Landing'
 import  Dashboard  from './Dashboard'
+import  UserEdit  from './UserEdit'
 
 class App extends Component {
   render() {
