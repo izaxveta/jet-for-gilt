@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import '../styles/Dashboard.css'
-
 import NavBar from './NavBar'
 
 class Dashboard extends Component {
@@ -19,7 +18,6 @@ class Dashboard extends Component {
   }
 
   render() {
-
     return (
       <React.Fragment>
         <NavBar user={{ firstName: 'Stella', lastName: 'Rousseau'}}/>
