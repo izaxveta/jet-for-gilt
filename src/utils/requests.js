@@ -5,6 +5,8 @@ const setCurrentUser = (moniker, password) => {
 }
 
 
+const authenticateUser = (moniker, password) => {
+  return fetch('https://jet-for-gilt.herokuapp.com/api/v1/authenticate', authenticateHeaders(moniker, password))
     .then((response) => handleResponse(response))
     .catch((error) => console.error({ error }))
 }
