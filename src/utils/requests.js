@@ -1,16 +1,3 @@
-// const authenticateUser = (email, password) => {
-//   return fetch('http://jet-for-gilt.herokuapp.com/api/v1/authenticate', authenticateHeaders(email, password))
-//     .then((response) => handleResponse(response))
-//     .catch((error) => console.error({ error }))
-// }
-
-// const authenticateHeaders = (email, password) => {
-//   return {
-//     method: 'POST',
-//     headers: {'Content-Type': 'application/json'},
-//     body: { 'email': email, 'password': password }
-//   }
-// }
 
 const getUser = (email) => {
   return fetch(`http://jet-for-gilt.herokuapp.com/api/v1/users/${email}`)
