@@ -5,6 +5,7 @@ class UserEdit extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      currentUser: JSON.parse(localStorage.getItem('user')).user
     }
   }
         <NavBar />
