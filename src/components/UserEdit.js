@@ -11,3 +11,4 @@ class UserEdit extends Component {
         <NavBar />
 }
 
+export default UserEdit
