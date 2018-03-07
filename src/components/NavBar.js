@@ -11,13 +11,13 @@ class NavBar extends Component {
   }
 
 componentWillMount() {
-  if (!this.state.user) {
+  if (!this.state.currentUser) {
     window.location.assign('/')
   }
 }
 
   renderNavLinks = () => {
-    if (this.state.user) {
+    if (this.state.currentUser) {
       return (
         <React.Fragment>
           <Link to={{ pathname: '/dashboard' }}>DASHBOARD</Link>
