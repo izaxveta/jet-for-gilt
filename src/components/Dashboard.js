@@ -20,7 +20,8 @@ class Dashboard extends Component {
   render() {
     return (
       <React.Fragment>
-        <NavBar user={{ firstName: 'Stella', lastName: 'Rousseau'}}/>
+        <NavBar />
+
       </React.Fragment>
     )
   }
