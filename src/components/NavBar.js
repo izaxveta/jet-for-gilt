@@ -20,8 +20,8 @@ componentWillMount() {
     if (this.state.currentUser) {
       return (
         <React.Fragment>
-          <Link to={{ pathname: '/dashboard' }}>DASHBOARD</Link>
           <Link to={{ pathname: '/profile' }}>PROFILE</Link>
+          <Link to={{ pathname: `/dashboard/${this.state.currentUser.moniker}` }}>DASHBOARD</Link>
           <Link to={{ pathname: '/settings' }}>SETTINGS</Link>
           <Link to={{ pathname: '/logout' }}>LOG OUT</Link>
           <SearchBar />
