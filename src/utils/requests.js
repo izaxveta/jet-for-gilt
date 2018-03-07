@@ -1,3 +1,9 @@
+const setCurrentUser = (moniker, password) => {
+  return authenticateUser(moniker, password)
+    .then(() => setUser(moniker))
+    .catch((error) => console.error({ error }))
+}
+
 
     .then((response) => handleResponse(response))
     .catch((error) => console.error({ error }))
