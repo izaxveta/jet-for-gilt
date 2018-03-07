@@ -11,7 +11,7 @@ class SignInForm extends Component {
     }
   }
 
-  updateUser = (key, event) => {
+  updateSignIn = (key, event) => {
     this.setState({ [key]: event.target.value })
   }
 
