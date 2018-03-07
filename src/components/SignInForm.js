@@ -17,12 +17,10 @@ class SignInForm extends Component {
 
   signInUser = (event) => {
     event.preventDefault()
-    // const password = this.state.password
-    let user = getUser(email)
-    // const token = authenticateUser(email, password)
-    // console.log(token)
-    // window.location.assign('/dashboard')
     const moniker = this.state.moniker
+    const password = this.state.password
+    handleAuthentication(moniker, password)
+    window.location.assign(`/dashboard/${moniker}`)
   }
 
   render() {
