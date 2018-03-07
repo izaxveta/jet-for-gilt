@@ -23,7 +23,6 @@ class UserDashboard extends Component {
   render() {
     return (
       <React.Fragment>
-       <p>hi</p>
         { this.renderEditButton() }
       </React.Fragment>
     )
