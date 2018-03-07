@@ -11,6 +11,12 @@ class NavBar extends Component {
     }
   }
 
+componentWillMount() {
+  if (!this.state.user) {
+    // window.location.assign('/')
+  }
+}
+
   renderNavLinks = () => {
     if (this.state.user) {
       return (
