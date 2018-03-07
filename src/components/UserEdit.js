@@ -8,7 +8,15 @@ class UserEdit extends Component {
       currentUser: JSON.parse(localStorage.getItem('user')).user
     }
   }
+
+  render() {
+    return (
+      <React.Fragment>
         <NavBar />
+        <p>Edit User Component { this.state.currentUser.moniker }</p>
+      </React.Fragment>
+    )
+  }
 }
 
 export default UserEdit
