@@ -32,8 +32,8 @@ class SignInForm extends Component {
         <div className='welcome-form-container'>
           <div className='signin-form-containter'>
             <form className='signin-form'>
-              <input required className='data-field' id='signin-password' type='password' placeholder='PASSWORD' onChange={ this.updateUser.bind(this, 'password') } />
               <input required className='data-field' id='signin-email'    type='moniker'    placeholder='MONIKER'    onChange={ this.updateSignIn.bind(this, 'moniker') } />
+              <input required className='data-field' id='signin-password' type='password' placeholder='PASSWORD' onChange={ this.updateSignIn.bind(this, 'password') } />
               <Link to={{ pathname: `/dashboard/${this.state.moniker}`,  state: { moniker:this.state.moniker, password: this.state.password } }} className='signin-button'>SIGN IN</Link>
             </form>
           </div>
