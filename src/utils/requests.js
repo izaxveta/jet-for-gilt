@@ -11,6 +11,14 @@ const authenticateUser = (moniker, password) => {
     .catch((error) => console.error({ error }))
 }
 
+const authenticateHeaders = (moniker, password) => {
+  return {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({ 'moniker': moniker, 'password': password })
+  }
+}
+
 const addUser = (firstName, lastName, email, password) => {
   return fetch('http://jet-for-gilt.herokuapp.com/api/v1/users', postHeaders(firstName, lastName, email, password))
     .then((response) => handleResponse(response))
