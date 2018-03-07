@@ -12,7 +12,7 @@ class Dashboard extends Component {
     }
   }
 
-  componentDidMount() {
+  componentWillMount() {
     document.getElementById('video-background').innerHTML = ''
   }
 
