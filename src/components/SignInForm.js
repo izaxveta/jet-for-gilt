@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
+import { handleAuthentication } from  '../utils/requests'
 
 class SignInForm extends Component {
   constructor(props) {
