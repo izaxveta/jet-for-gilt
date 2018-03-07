@@ -1,6 +1,4 @@
 
-const getUser = (email) => {
-  return fetch(`http://jet-for-gilt.herokuapp.com/api/v1/users/${email}`)
     .then((response) => handleResponse(response))
     .catch((error) => console.error({ error }))
 }
