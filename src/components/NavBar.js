@@ -12,7 +12,7 @@ class NavBar extends Component {
 
 componentWillMount() {
   if (!this.state.user) {
-    // window.location.assign('/')
+    window.location.assign('/')
   }
 }
 
