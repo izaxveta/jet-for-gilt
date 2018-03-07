@@ -14,6 +14,10 @@ const requestHeaders = () => {
   }
 }
 
+const handleAuthentication = (moniker, password) => {
+  authenticateUser(moniker,password)
+}
+
 const authenticateUser = (moniker, password) => {
   return fetch('https://jet-for-gilt.herokuapp.com/api/v1/authenticate', authenticateHeaders(moniker, password))
     .then((response) => handleResponse(response))
