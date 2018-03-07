@@ -34,6 +34,7 @@ class SignInForm extends Component {
             <form className='signin-form'>
               <input required className='data-field' id='signin-email'    type='moniker'    placeholder='MONIKER'    onChange={ this.updateSignIn.bind(this, 'moniker') } />
               <input required className='data-field' id='signin-password' type='password' placeholder='PASSWORD' onChange={ this.updateSignIn.bind(this, 'password') } />
+              {/* <button type='submit' className='signin-button' onClick={ this.signInUser }>SIGN IN</button> */}
               <Link to={{ pathname: `/dashboard/${this.state.moniker}`,  state: { moniker:this.state.moniker, password: this.state.password } }} className='signin-button'>SIGN IN</Link>
             </form>
           </div>
