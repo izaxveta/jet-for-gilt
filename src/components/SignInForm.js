@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 // , query: { {user: getUser(this.state.email) }}
 import { Link } from 'react-router-dom'
-// import { authenticateUser } from  '../utils/requests'
 
 class SignInForm extends Component {
   constructor(props) {
