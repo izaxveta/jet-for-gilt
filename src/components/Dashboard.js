@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import '../styles/Dashboard.css'
 import NavBar from './NavBar'
+import { setCurrentUser } from '../utils/requests'
 
 class Dashboard extends Component {
   constructor(props) {
