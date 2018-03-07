@@ -6,7 +6,7 @@ class NavBar extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      user: localStorage.getItem('user')
+      currentUser: JSON.parse(localStorage.getItem('user')).user
     }
   }
 
