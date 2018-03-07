@@ -7,10 +7,8 @@ class Dashboard extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      email: this.props.location.state,
-      user: {firstName: 'Stella',
-        lastName: 'Rousseau'
-        }
+      moniker: this.props.location.state.moniker,
+      currentUser: JSON.parse(localStorage.getItem('user'))
     }
   }
 
