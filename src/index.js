@@ -13,4 +13,11 @@ ReactDOM.render(
   document.getElementById('root')
 )
 
+ReactDOM.render(
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <NavBar />
+  </BrowserRouter>,
+  document.getElementById('nav-links')
+)
+
 registerServiceWorker()
