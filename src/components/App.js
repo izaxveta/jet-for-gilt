@@ -5,6 +5,8 @@ import { Route, Switch } from 'react-router-dom'
 import  Landing  from './Landing'
 import  Dashboard  from './Dashboard'
 import  UserEdit  from './UserEdit'
+import Search from './Search'
+import Venue from './Venue'
 
 class App extends Component {
   render() {
