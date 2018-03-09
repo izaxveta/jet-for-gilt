@@ -23,7 +23,7 @@ class Dashboard extends Component {
   render() {
     return (
       <React.Fragment>
-        <NavBar />
+        {/* <NavBar /> */}
         <UserDashboard />
       </React.Fragment>
     )
