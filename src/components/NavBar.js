@@ -7,6 +7,7 @@ class NavBar extends Component {
     super(props)
     this.state = {
       // currentUser: JSON.parse(localStorage.getItem('user')).user
+      token: localStorage.getItem('auth_token'),
       currentUser: this.checkUser()
     }
   }
