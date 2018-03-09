@@ -4,7 +4,13 @@ class UserDashboard extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      currentUser: JSON.parse(localStorage.getItem('user')).user
+
+    }
+  }
+
+  setUser = () => {
+    if (localStorage.getItem('user')) {
+      this.setState({ currentUser: JSON.parse(localStorage.getItem('user')).user })
     }
   }
 
