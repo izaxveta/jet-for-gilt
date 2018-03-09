@@ -33,9 +33,11 @@ class NavBar extends Component {
 
   render() {
     return (
+      <React.Fragment>
         <div className='navigation-buttons'>
           { this.renderNavOptions() }
         </div>
+      </React.Fragment>
     )
   }
 }
