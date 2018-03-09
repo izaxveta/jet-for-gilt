@@ -5,6 +5,7 @@ class VenueCollection extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      venues: props.venues
     }
   }
 }
