@@ -8,6 +8,13 @@ class VenueCollection extends Component {
       venues: props.venues
     }
   }
+
+  renderVenueCards = () => {
+    return this.props.venues.map((venue) =>
+      (<VenueCard venue={ venue } />)
+    )
+  }
+
 }
 
 export default VenueCollection
