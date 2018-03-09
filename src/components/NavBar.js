@@ -23,7 +23,7 @@ componentWillMount() {
           <Link to={{ pathname: `/dashboard/${this.state.currentUser.moniker}` }}>DASHBOARD</Link>
           <Link to={{ pathname: `/${this.state.currentUser.moniker}` }}>PROFILE</Link>
           <Link to={{ pathname: '/settings' }}>SETTINGS</Link>
-          <Link to={{ pathname: '/logout' }}>LOG OUT</Link>
+          <button type='submit' className='signout-button' onClick={ this.signOut }>SIGN OUT</button>
           <SearchBar />
         </React.Fragment>
       )
