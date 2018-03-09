@@ -19,6 +19,11 @@ class Search extends Component {
       .catch((error) => console.error({ error }))
     this.render()
   }
+
+  setVenues = (venueResults) => {
+    this.setState({ venues: venueResults })
+  }
+
 }
 
 export default Search
