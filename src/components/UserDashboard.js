@@ -30,7 +30,7 @@ class UserDashboard extends Component {
     }
   }
 
-  render() {
+  renderUserDashboard = () => {
     return (
       <React.Fragment>
         <div className='dashboard-name'>{ this.state.currentUser.first_name }</div>
@@ -38,6 +38,13 @@ class UserDashboard extends Component {
         <div className='dashboard-nationality'>{ this.state.currentUser.nationality }</div>
         <div className='dashboard-occupation'>{ this.state.currentUser.occupation }</div>
         { this.renderEditButton() }
+      </React.Fragment>
+    )
+  }
+  render() {
+    return (
+      <React.Fragment>
+        { this.renderUserDashboard() }
       </React.Fragment>
     )
   }
