@@ -12,6 +12,12 @@ class NavBar extends Component {
     }
   }
 
+  componentDidMount() {
+    if (!this.state.token) {
+      // window.location.assign('/')
+    }
+  }
+
   checkUser = () => {
     if (localStorage.getItem('user')) {
       return JSON.parse(localStorage.getItem('user')).user
