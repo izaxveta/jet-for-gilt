@@ -10,15 +10,12 @@ class NavBar extends Component {
     }
   }
 
-componentWillMount() {
-  if (!this.state.currentUser) {
   signOut = (event) => {
     event.preventDefault()
     localStorage.removeItem('auth_token')
     localStorage.removeItem('user')
     window.location.assign('/')
   }
-}
 
   renderNavOptions = () => {
     if (this.state.currentUser) {
