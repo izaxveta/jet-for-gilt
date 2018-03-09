@@ -12,6 +12,13 @@ class Search extends Component {
       venues: []
     }
   }
+
+  componentWillMount() {
+    getAllVenues(this.state.query)
+      .then((venues) => this.setVenues(venues))
+      .catch((error) => console.error({ error }))
+    this.render()
+  }
 }
 
 export default Search
