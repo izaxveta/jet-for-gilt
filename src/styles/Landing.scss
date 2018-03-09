@@ -49,6 +49,14 @@ nav {
     text-decoration: none;
     color: goldenrod;
   }
+
+  button {
+    border: none;
+    color: goldenrod;
+    background-color: black;
+    font-family: $josefin-sans;
+    font-size: 16px;
+  }
 }
 
 #landing-container {
