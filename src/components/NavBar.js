@@ -10,20 +10,21 @@ class NavBar extends Component {
     }
   }
 
-componentWillMount() {
-  if (!this.state.currentUser) {
+  signOut = (event) => {
+    event.preventDefault()
+    localStorage.removeItem('auth_token')
+    localStorage.removeItem('user')
     window.location.assign('/')
   }
-}
 
-  renderNavLinks = () => {
+  renderNavOptions = () => {
     if (this.state.currentUser) {
       return (
         <React.Fragment>
           <Link to={{ pathname: `/dashboard/${this.state.currentUser.moniker}` }}>DASHBOARD</Link>
           <Link to={{ pathname: `/${this.state.currentUser.moniker}` }}>PROFILE</Link>
           <Link to={{ pathname: '/settings' }}>SETTINGS</Link>
-          <Link to={{ pathname: '/logout' }}>LOG OUT</Link>
+          <button type='submit' className='signout-button' onClick={ this.signOut }>SIGN OUT</button>
           <SearchBar />
         </React.Fragment>
       )
@@ -32,9 +33,11 @@ componentWillMount() {
 
   render() {
     return (
-      <div className='navigation-buttons'>
-        { this.renderNavLinks() }
-      </div>
+      <React.Fragment>
+        <div className='navigation-buttons'>
+          { this.renderNavOptions() }
+        </div>
+      </React.Fragment>
     )
   }
 }
