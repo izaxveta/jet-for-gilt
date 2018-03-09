@@ -10,6 +10,12 @@ class NavBar extends Component {
     }
   }
 
+  checkUser = () => {
+    if (localStorage.getItem('user')) {
+      return JSON.parse(localStorage.getItem('user')).user
+    }
+  }
+
   signOut = (event) => {
     event.preventDefault()
     localStorage.removeItem('auth_token')
