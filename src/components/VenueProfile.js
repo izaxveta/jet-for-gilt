@@ -33,6 +33,10 @@ const VenueProfile = (props) => {
   )
 }
 
+const displayVenueCategories = (categoryCollection) => {
+  return categoryCollection.join(', ')
+}
+
 const displayVenueLocation = (location) => {
   return location.join('\n')
 }
