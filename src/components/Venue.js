@@ -19,8 +19,12 @@ class Venue extends Component {
     this.setState({ mode: `${value}`})
   }
 
-  setVenueCategories() {
-
+  renderItemCards() {
+    if (!this.state.items) {
+      return (
+        <div className="loader"></div>
+      )
+    }
   }
 
   renderItemCategory = () => {
@@ -53,7 +57,7 @@ class Venue extends Component {
           </div>
         </div>
         { this.renderItemCategory() }
-
+        { this.renderItemCards() }
       </React.Fragment>
     )
   }
