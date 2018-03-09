@@ -44,7 +44,6 @@ class Venue extends Component {
   }
 
   render() {
-    debugger
     return (
       <React.Fragment>
         <VenueProfile venue={ this.state.venue } />
