@@ -20,7 +20,7 @@ componentWillMount() {
   }
 }
 
-  renderNavLinks = () => {
+  renderNavOptions = () => {
     if (this.state.currentUser) {
       return (
         <React.Fragment>
