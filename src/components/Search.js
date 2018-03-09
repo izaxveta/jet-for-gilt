@@ -27,7 +27,6 @@ class Search extends Component {
   render = () => {
     return (
       <React.Fragment>
-        {/* <NavBar /> */}
         <div className='search-comp-container'>
           <h3>{ this.state.venues.length } Results</h3>
           <VenueCollection venues={ this.state.venues } />
