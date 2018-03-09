@@ -19,8 +19,6 @@ class Venue extends Component {
     this.setState({ mode: `${value}`})
   }
 
-  setVenueCategories() {
-
   renderItemCards() {
     if (!this.state.items) {
       return (
