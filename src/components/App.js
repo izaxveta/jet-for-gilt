@@ -8,6 +8,7 @@ import  UserEdit  from './UserEdit'
 import Search from './Search'
 import Venue from './Venue'
 
+import '../styles/App.css'
 class App extends Component {
   render() {
     return (
