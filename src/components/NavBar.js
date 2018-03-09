@@ -6,7 +6,21 @@ class NavBar extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      currentUser: JSON.parse(localStorage.getItem('user')).user
+      // currentUser: JSON.parse(localStorage.getItem('user')).user
+      token: localStorage.getItem('auth_token'),
+      currentUser: this.checkUser()
+    }
+  }
+
+  componentDidMount() {
+    if (!this.state.token) {
+      // window.location.assign('/')
+    }
+  }
+
+  checkUser = () => {
+    if (localStorage.getItem('user')) {
+      return JSON.parse(localStorage.getItem('user')).user
     }
   }
 

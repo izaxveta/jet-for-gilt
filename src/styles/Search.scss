@@ -1,3 +1,10 @@
+.search-comp-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10%;
+}
+
 .search-listings {
   padding-bottom: 30px;
   display: flex;
