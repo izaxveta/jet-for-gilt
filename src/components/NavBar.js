@@ -33,9 +33,9 @@ class NavBar extends Component {
 
   render() {
     return (
-      <div className='navigation-buttons'>
-        { this.renderNavLinks() }
-      </div>
+        <div className='navigation-buttons'>
+          { this.renderNavOptions() }
+        </div>
     )
   }
 }
