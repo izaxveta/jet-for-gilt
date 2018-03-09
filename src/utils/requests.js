@@ -91,5 +91,6 @@ const handleResponse = (response) => {
 module.exports = {
   setCurrentUser,
   addUser,
-  handleAuthentication
+  handleAuthentication,
+  getAllVenues
 }
