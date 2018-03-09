@@ -12,7 +12,7 @@ class UserEdit extends Component {
   render() {
     return (
       <React.Fragment>
-        <NavBar />
+        {/* <NavBar /> */}
         <p>Edit User Component { this.state.currentUser.moniker }</p>
       </React.Fragment>
     )
