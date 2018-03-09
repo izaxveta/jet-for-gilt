@@ -24,6 +24,15 @@ class Search extends Component {
     this.setState({ venues: venueResults })
   }
 
+  render = () => {
+    return (
+      <React.Fragment>
+        <h3>{ this.state.venues.length } Results</h3>
+        <VenueCollection venues={ this.state.venues } />
+      </React.Fragment>
+    )
+  }
+
 }
 
 export default Search
