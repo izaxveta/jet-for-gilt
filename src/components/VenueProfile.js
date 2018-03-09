@@ -32,6 +32,9 @@ const VenueProfile = (props) => {
     </React.Fragment>
   )
 }
+
+const displayVenueLocation = (location) => {
+  return location.join('\n')
 }
 
 export default VenueProfile
