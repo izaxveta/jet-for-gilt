@@ -36,21 +36,30 @@ nav {
 // //   padding-top: 10px;
 // // }
 
-.navigation-buttons a {
-  font-family: $josefin-sans;
-  font-style: normal;
-  text-decoration: none;
-  color: goldenrod;
-}
-
 .navigation-buttons {
-  position: fixed;
   top: 15%;
   display: flex;
   width: 90%;
   justify-content: space-around;
   align-items: center;
   padding-bottom: 5px;
+  font-family: $josefin-sans;
+
+
+  a {
+    font-family: $josefin-sans;
+    font-style: normal;
+    text-decoration: none;
+    color: goldenrod;
+  }
+
+  button {
+    border: none;
+    color: goldenrod;
+    background-color: black;
+    font-family: $josefin-sans;
+    font-size: 16px;
+  }
 }
 
 #landing-container {
