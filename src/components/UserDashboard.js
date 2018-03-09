@@ -14,6 +14,10 @@ class UserDashboard extends Component {
     }
   }
 
+  componentWillMount() {
+    this.setUser()
+  }
+
   renderEditButton = () => {
     if (!this.state.currentUser.birthday) {
       return (
