@@ -36,13 +36,6 @@ nav {
 // //   padding-top: 10px;
 // // }
 
-.navigation-buttons a {
-  font-family: $josefin-sans;
-  font-style: normal;
-  text-decoration: none;
-  color: goldenrod;
-}
-
 .navigation-buttons {
   top: 15%;
   display: flex;
@@ -50,6 +43,12 @@ nav {
   justify-content: space-around;
   align-items: center;
   padding-bottom: 5px;
+  a {
+    font-family: $josefin-sans;
+    font-style: normal;
+    text-decoration: none;
+    color: goldenrod;
+  }
 }
 
 #landing-container {
