@@ -15,6 +15,15 @@ class VenueCollection extends Component {
     )
   }
 
+  render() {
+    return (
+      <React.Fragment>
+        <div class='search-listings'>
+          { this.renderVenueCards() }
+        </div>
+      </React.Fragment>
+    )
+  }
 }
 
 export default VenueCollection
