@@ -17,16 +17,6 @@ const setUser = (moniker) => {
     .catch((error) => console.error({ error }))
 }
 
-const requestHeaders = () => {
-  return {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': localStorage.getItem('auth_token')
-    }
-  }
-}
-
 const handleAuthentication = (moniker, password) => {
   authenticateUser(moniker,password)
 }
