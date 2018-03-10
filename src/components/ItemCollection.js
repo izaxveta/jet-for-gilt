@@ -5,6 +5,10 @@ import ItemCard from './ItemCard'
 class ItemCollection extends Component {
   constructor(props) {
     super(props)
+    this.state = {
+      items: props.items.items
+    }
+  }
 
   renderItemCards = () => {
     this.state.items.map((item) =>
