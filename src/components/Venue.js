@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import VenueProfile from './VenueProfile'
+import ItemCollection from './ItemCollection'
 import { getAllItems } from '../utils/requests'
 import '../styles/Venue.css'
 
