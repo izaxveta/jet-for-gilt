@@ -24,3 +24,4 @@ const ItemCard = (props) => {
     </div>
   )
 }
+export default ItemCard
