@@ -1,3 +1,16 @@
+const getAllItems = (categoriesCollection) => {
+  const categories = categoriesCollection.join(',')
+  return fetch(`https://jet-for-gilt.herokuapp.com/api/v1/items?q=${categories}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': localStorage.getItem('auth_token')
+    }
+  })
+    .then((response) => handleResponse(response))
+    .catch((error) => console.error({ error }))
+}
+
 const getAllVenues = (query) => {
   return fetch(`https://jet-for-gilt.herokuapp.com/api/v1/search?q=${query}`, {
     method: 'GET',
