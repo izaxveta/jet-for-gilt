@@ -44,6 +44,16 @@ class Venue extends Component {
     }
   }
 
+  setItems = (itemResults) => {
+    this.setState({ items: itemResults})
+  }
+
+  componentWillMount() {
+    getAllItems(this.state.categories)
+      .then((items) => this.setItems(items))
+      .catch((error) => console.error({ error }))
+  }
+
   render() {
     debugger
     return (
