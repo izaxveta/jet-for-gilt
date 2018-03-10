@@ -87,7 +87,6 @@ const postHeaders = (firstName, lastName, email, password) => {
 }
 
 const handleResponse = (response) => {
-  debugger
   return response.json()
     .then((json) => {
       if (!response.ok) {
