@@ -24,4 +24,22 @@ const ItemCard = (props) => {
     </div>
   )
 }
+
+const renderPrice = (item) => {
+  if (item.msrp_price !== item.sale_price) {
+    return (
+      <React.Fragment>
+        <div className='msrp'>${ item.msrp_price }</div>
+        <div className='sale'>${ item.sale_price }</div>
+      </React.Fragment>
+    )
+  } else {
+    return (
+      <React.Fragment>
+        <div className='regular'>${ item.msrp_price }</div>
+      </React.Fragment>
+    )
+  }
+}
+
 export default ItemCard
