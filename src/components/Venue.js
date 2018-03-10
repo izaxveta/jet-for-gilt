@@ -58,7 +58,7 @@ class Venue extends Component {
   }
 
   setItems = (itemResults) => {
-    this.setState({ items: itemResults})
+    this.setState({ items: itemResults })
   }
 
   componentWillMount() {
