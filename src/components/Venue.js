@@ -25,6 +25,12 @@ class Venue extends Component {
       return (
         <div className="loader"></div>
       )
+    } else {
+      return (
+        <React.Fragment>
+          { this.renderItemCategory }
+        </React.Fragment>
+      )
     }
   }
 
