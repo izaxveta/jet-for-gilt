@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import VenueProfile from './VenueProfile'
+import { getAllItems } from '../utils/requests'
 import '../styles/Venue.css'
 
 class Venue extends Component {
@@ -24,6 +25,12 @@ class Venue extends Component {
       return (
         <div className="loader"></div>
       )
+    } else {
+      return (
+        <React.Fragment>
+          { this.renderItemCategory }
+        </React.Fragment>
+      )
     }
   }
 
@@ -43,6 +50,16 @@ class Venue extends Component {
     }
   }
 
+  setItems = (itemResults) => {
+    this.setState({ items: itemResults})
+  }
+
+  componentWillMount() {
+    getAllItems(this.state.categories)
+      .then((items) => this.setItems(items))
+      .catch((error) => console.error({ error }))
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -55,7 +72,6 @@ class Venue extends Component {
             <button type='submit' className='option' onClick={ this.onClickChangeItems }>ACCESSORIES</button>
           </div>
         </div>
-        { this.renderItemCategory() }
         { this.renderItemCards() }
       </React.Fragment>
     )
