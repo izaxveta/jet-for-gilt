@@ -2,6 +2,7 @@
   "name": "jet-for-gilt",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://jet-for-gilt.herokuapp.com/",
   "homepage": "https://izaxveta.github.io/jet-for-gilt",
   "dependencies": {
     "gh-pages": "^1.1.0",
