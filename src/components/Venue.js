@@ -55,7 +55,6 @@ class Venue extends Component {
   }
 
   render() {
-    debugger
     return (
       <React.Fragment>
         <VenueProfile venue={ this.state.venue } />
@@ -67,7 +66,6 @@ class Venue extends Component {
             <button type='submit' className='option' onClick={ this.onClickChangeItems }>ACCESSORIES</button>
           </div>
         </div>
-        { this.renderItemCategory() }
         { this.renderItemCards() }
       </React.Fragment>
     )
