@@ -93,5 +93,6 @@ module.exports = {
   setCurrentUser,
   addUser,
   handleAuthentication,
-  getAllVenues
+  getAllVenues,
+  getAllItems
 }
