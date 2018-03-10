@@ -35,7 +35,7 @@ class Venue extends Component {
     }
   }
 
-  renderItemCategory = () => {
+  toggleItemCategory() {
     if (this.state.mode === 'APPAREL') {
       return (
         <p>APPAREL</p>
