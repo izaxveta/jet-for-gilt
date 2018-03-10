@@ -29,7 +29,7 @@ class Venue extends Component {
     } else {
       return (
         <React.Fragment>
-          { this.renderItemCategory }
+          { this.renderItems }
         </React.Fragment>
       )
     }
